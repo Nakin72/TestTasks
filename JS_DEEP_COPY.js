@@ -4,6 +4,7 @@ function deepCopy(obj, copies = new WeakMap()) {
   if (typeof obj !== 'object' || obj === null) {
     return obj;
   }
+ //Проверка: если объект уже скопирован
  if (copies.has(obj)) {
     return copies.get(obj);
   }
